@@ -1,0 +1,7 @@
+﻿  Client Over_IO_Call.cpp
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Client - Overlapped IO Callback\Client Over_IO_Call.cpp(77,19): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Client - Overlapped IO Callback\Client Over_IO_Call.cpp(102,14): warning C4101: 'text_color' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Client - Overlapped IO Callback\Client Over_IO_Call.cpp(101,17): warning C4101: 'ps' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Client - Overlapped IO Callback\Client Over_IO_Call.cpp(103,14): warning C4101: 'bk_color' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Client - Overlapped IO Callback\Client Over_IO_Call.cpp(98,14): warning C4101: 'mdc' :참조되지 않은 지역 변수입니다.
+  Client - Overlapped IO Callback.vcxproj -> C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\x64\Debug\Client - Overlapped IO Callback.exe

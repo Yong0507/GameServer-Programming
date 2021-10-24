@@ -1,0 +1,6 @@
+﻿  Server Over_IO_Call.cpp
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Server - Overlapped IO Callback\Server Over_IO_Call.cpp(152,60): warning C4311: 'reinterpret_cast': 'HANDLE'에서 'int'(으)로 포인터가 잘립니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Server - Overlapped IO Callback\Server Over_IO_Call.cpp(152,60): warning C4302: 'reinterpret_cast': 'HANDLE'에서 'int'(으)로 잘립니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Server - Overlapped IO Callback\Server Over_IO_Call.cpp(187,60): warning C4311: 'reinterpret_cast': 'HANDLE'에서 'int'(으)로 포인터가 잘립니다.
+C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\Server - Overlapped IO Callback\Server Over_IO_Call.cpp(187,60): warning C4302: 'reinterpret_cast': 'HANDLE'에서 'int'(으)로 잘립니다.
+  Server - Overlapped IO Callback.vcxproj -> C:\Users\82104\Desktop\게임 서버\2016184004 김용진 - 과제3\x64\Debug\Server - Overlapped IO Callback.exe

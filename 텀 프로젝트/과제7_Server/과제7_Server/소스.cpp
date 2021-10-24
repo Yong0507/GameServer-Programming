@@ -1213,14 +1213,15 @@ void Load_Database()
 
 				// Connect to data source  
 				retcode = SQLConnect(hdbc, (SQLWCHAR*)L"GS_Project_2016184004", SQL_NTS, (SQLWCHAR*)NULL, 0, NULL, 0);
-				//retcode = SQLConnect(hdbc, (SQLWCHAR*)L"jys_gameserver", SQL_NTS, (SQLWCHAR*)NULL, SQL_NTS, NULL, SQL_NTS);
 
 				// Allocate statement handle  
 				if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 					retcode = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt); // SQL명령어 전달할 한들
+					
+					//retcode = SQLExecDirect(hstmt, (SQLWCHAR*)L"SELECT user_id, user_name, user_hwp, user_level, user_hp, pos_x, pos_y FROM user_table ORDER BY 2", SQL_NTS); // 모든 정보 다 가져오기
 
-					retcode = SQLExecDirect(hstmt, (SQLWCHAR*)L"SELECT user_id, user_name, user_hwp, user_level, user_hp, pos_x, pos_y FROM user_table ORDER BY 2", SQL_NTS); // 모든 정보 다 가져오기
-					//retcode = SQLExecDirect(hstmt, (SQLWCHAR *)L"EXEC select_highlevel 90", SQL_NTS); // 90레벨 이상만 가져오기
+					retcode = SQLExecDirect(hstmt, (SQLWCHAR*)L"EXEC select_player ", SQL_NTS); // 모든 정보 다 가져오기
+
 
 					if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 
@@ -1295,8 +1296,8 @@ void Update_Database(int id, int x, int y,int hp,int level, int exp)
 	SQLHSTMT hstmt = 0; // sql명령어를 전달하는 핸들
 	SQLRETURN retcode;  // sql명령어를 날릴때 성공유무를 리턴해줌
 	SQLWCHAR query[1024];
-	wsprintf(query, L"UPDATE user_table SET pos_x = %d, pos_y = %d, user_hp = %d, user_level = %d, user_hwp = %d WHERE user_id = %d", x, y, hp, level, exp, id);
-
+	// wsprintf(query, L"UPDATE user_table SET pos_x = %d, pos_y = %d, user_hp = %d, user_level = %d, user_hwp = %d WHERE user_id = %d", x, y, hp, level, exp, id);
+	wsprintf(query, L"EXEC update_player %d, %d, %d, %d, &d, %d", x, y, hp, level, exp, id);
 
 	setlocale(LC_ALL, "korean"); // 오류코드 한글로 변환
 	//std::wcout.imbue(std::locale("korean"));
@@ -1317,7 +1318,6 @@ void Update_Database(int id, int x, int y,int hp,int level, int exp)
 
 				// Connect to data source  
 				retcode = SQLConnect(hdbc, (SQLWCHAR*)L"GS_Project_2016184004", SQL_NTS, (SQLWCHAR*)NULL, 0, NULL, 0);
-				//retcode = SQLConnect(hdbc, (SQLWCHAR*)L"jys_gameserver", SQL_NTS, (SQLWCHAR*)NULL, SQL_NTS, NULL, SQL_NTS);
 
 				// Allocate statement handle  
 				if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
